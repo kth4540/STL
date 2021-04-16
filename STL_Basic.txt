@@ -1,0 +1,12 @@
+Container는 프로그래머가 데이터 구조를 queue,list,stack 처럼 사용할 수 있게 만들어줌
+
+container는 멤버 함수를 직접적으로, 또는 iterator를 통해 간접적으로 데이터를 관리할 수 있게 함
+(iterator는 pointer와 유사함 )
+
+Container 는 repeater 를 통해서 알고리즘에 접근할 수 있음
+
+알고리즘은 callable type을 통해 container를 다룸
+
+STL의 Container는 array를 제외하면(vector,deque,forward-list,list 등) 전부 크기가 dynamic함
+
+메모리를 희생해서 속도를 얻을 수 있고, 그 반대의 경우도 가능함

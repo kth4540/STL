@@ -1,0 +1,9 @@
+﻿  save.cpp
+C:\Users\USER\Desktop\STL\STL\STL_3_2\save.cpp(18,44): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Source.cpp
+C:\Users\USER\Desktop\STL\STL\STL_3_2\Source.cpp(146,20): warning C4018: '<': signed/unsigned mismatch
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 367 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  STL_3_2.vcxproj -> C:\Users\USER\Desktop\STL\STL\Release\STL_3_2.exe

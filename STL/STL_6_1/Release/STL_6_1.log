@@ -1,0 +1,9 @@
+﻿  Source.cpp
+D:\STL\STL\STL_6_1\String.h(36,21): warning C4018: '<': signed/unsigned mismatch
+D:\STL\STL\STL_6_1\String.h(137,20): warning C4018: '<': signed/unsigned mismatch
+  Generating code
+  213 of 438 functions (48.6%) were compiled, the rest were copied from previous compilation.
+    2 functions were new in current compilation
+    14 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  STL_6_1.vcxproj -> D:\STL\STL\Release\STL_6_1.exe

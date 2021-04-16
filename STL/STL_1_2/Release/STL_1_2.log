@@ -1,0 +1,23 @@
+﻿  save.cpp
+  The contents of <string_view> are available only with C++17 or later.
+  The contents of <filesystem> are available only with C++17 or later.
+C:\Users\USER\Desktop\STL\STL\STL_1_2\save.h(9,16): error C2039: 'string_view': is not a member of 'std'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\fstream(26): message : see declaration of 'std'
+C:\Users\USER\Desktop\STL\STL\STL_1_2\save.h(9,28): error C2065: 'string_view': undeclared identifier
+C:\Users\USER\Desktop\STL\STL\STL_1_2\save.h(9,28): error C2146: syntax error: missing ')' before identifier 'file_name'
+C:\Users\USER\Desktop\STL\STL\STL_1_2\save.cpp(2,16): error C2039: 'string_view': is not a member of 'std'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\fstream(26): message : see declaration of 'std'
+C:\Users\USER\Desktop\STL\STL\STL_1_2\save.cpp(2,28): error C2065: 'string_view': undeclared identifier
+C:\Users\USER\Desktop\STL\STL\STL_1_2\save.cpp(2,28): error C2146: syntax error: missing ')' before identifier 'file_name'
+C:\Users\USER\Desktop\STL\STL\STL_1_2\save.cpp(3,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\USER\Desktop\STL\STL\STL_1_2\save.cpp(3,1): error C2447: '{': missing function header (old-style formal list?)
+  Source.cpp
+  The contents of <string_view> are available only with C++17 or later.
+  The contents of <filesystem> are available only with C++17 or later.
+C:\Users\USER\Desktop\STL\STL\STL_1_2\save.h(9,16): error C2039: 'string_view': is not a member of 'std'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\fstream(26): message : see declaration of 'std'
+C:\Users\USER\Desktop\STL\STL\STL_1_2\save.h(9,28): error C2065: 'string_view': undeclared identifier
+C:\Users\USER\Desktop\STL\STL\STL_1_2\save.h(9,28): error C2146: syntax error: missing ')' before identifier 'file_name'
+C:\Users\USER\Desktop\STL\STL\STL_1_2\Source.cpp(79,39): error C2514: 'std::uniform_int_distribution': class template cannot be constructed
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\random(1872): message : see declaration of 'std::uniform_int_distribution'
+C:\Users\USER\Desktop\STL\STL\STL_1_2\Source.cpp(89,2): error C3861: 'save': identifier not found

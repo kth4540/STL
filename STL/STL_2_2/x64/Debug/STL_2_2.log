@@ -1,0 +1,5 @@
+﻿  save.cpp
+C:\Users\USER\Desktop\STL\STL\STL_2_2\save.cpp(18,44): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Source.cpp
+  Generating Code...
+  STL_2_2.vcxproj -> C:\Users\USER\Desktop\STL\STL\x64\Debug\STL_2_2.exe

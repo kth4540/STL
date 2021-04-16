@@ -1,0 +1,8 @@
+﻿  Source.cpp
+D:\STL\STL\STL_6_2\String.h(36,21): warning C4018: '<': signed/unsigned mismatch
+D:\STL\STL\STL_6_2\String.h(137,20): warning C4018: '<': signed/unsigned mismatch
+  Generating code
+  Previous IPDB and IOBJ mismatch, fall back to full compilation.
+  All 312 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  STL_6_2.vcxproj -> D:\STL\STL\Release\STL_6_2.exe

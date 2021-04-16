@@ -1,0 +1,2 @@
+﻿  Source.cpp
+C:\Users\USER\Desktop\STL\STL_Practice\STL_P_2_1\STL_P_2_1\Source.cpp(15,1): error C2397: conversion from 'int' to 'size_t' requires a narrowing conversion

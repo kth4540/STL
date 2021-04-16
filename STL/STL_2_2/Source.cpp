@@ -1,0 +1,71 @@
+//-----------------------------------
+//앞으로 x86 release 에서 compile 한다
+//2021 1학기 STL 화(5~6) 목(5~6) 3월 11일 화요일 2주 2일차
+//
+//[
+//
+//
+//실행될 때 마다 소스파일을 저장한다.
+//-----------------------------------
+#include <iostream>
+#include "save.h"
+#include <vector>
+#include <numeric>
+#include <thread>
+#include <chrono>
+using namespace std;
+int main()
+{
+	//[문제] 사용자가 원하는 갯수 num 만큼 int를 저장할 공간을 확보한다.
+	// 이 공간을 1부터 num까지 숫자로 채운다
+	// 처음과 마지막 값을 출력한다
+
+	//cout << "정수 갯수: " << endl;
+	//int num;
+	//cin >> num;
+	//vector<int>my_arr;
+	////	[]->contiguous(물리적인 연속성)
+	//try
+	//{
+	//	my_arr.resize(num);
+	//}
+	//catch (exception& e)
+	//{
+	//	cout << e.what() << endl;
+	//}
+	//iota(begin(my_arr), end(my_arr), 1);
+
+	//cout << *(begin(my_arr)) << " " << *(end(my_arr) - 1) << endl;
+
+	//[문제]시스템이 메모리를 줄 수 있을때까지 메모리를 3초에 1번씩 요청한다
+	//500mb씩 계속 해제하지 않고 요청한다.
+
+	//int cnt = 0;
+	//while (true)
+	//{
+	//	new char[200'000'000];
+	//	cout << ++cnt << "할당 성공" << endl;
+	//	//this_thread::sleep_for(1s);
+	//}
+
+	//C++ Core Guide - raw pointer를 사용하지 말 것
+
+	//while (true)
+	//{
+	//	int cnt = 0;
+	//	unique_ptr<char[]>p{ new char[50000] };
+	//	cout << p[0] << endl;
+	//}
+
+	auto b = chrono::steady_clock::now();	//시작
+
+	this_thread::sleep_for(100ms);
+
+	using namespace std::chrono;
+
+	cout << "경과시간 - " << duration_cast<milliseconds>(steady_clock::now() - b).count() << endl;
+	save("source.cpp");
+	//-> 시간 재기
+	return 0;
+
+}

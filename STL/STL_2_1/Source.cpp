@@ -1,0 +1,104 @@
+//-----------------------------------
+//앞으로 x86 release 에서 compile 한다
+//2021 1학기 STL 화(5~6) 목(5~6) 3월 9일 화요일 2주 1일차
+
+//갯수를 늘리며 자료가 저장되는 방식을 알아본다
+//많은 수의 자료를 저장하는 방식을 알아본다
+
+//알고리즘 시간재기
+//스마트 포인터
+//앞으로 사용할 관찰용 class 만들어두기
+//실행될 때 마다 소스파일을 저장한다.
+//-----------------------------------
+#include "save.h"
+#include <iostream>
+#include <random>
+#include <algorithm>
+#include <fstream>
+#include <string_view>
+#include <numeric>
+
+using namespace std;
+
+default_random_engine dre;
+
+int num;
+bool x(int a, int b)
+{
+	num += 1;
+	cout << a << "---" << b << endl;
+	return a > b;
+}
+
+//int a[100]{};
+
+int main()
+{
+	//[문제] int 100개를 저장할 공간을 전역 메모리 공간에 마련한다
+	//임의값은 랜덤엔진과 분포로
+	//값을 오름차순으로 정렬
+	//정렬된 값을 파일 "upsort.txt"에 저장한다
+	//파일을 열어 오름차순으로 정렬되었나 확인한다
+	//uniform_int_distribution uid{ 0,100 };
+
+	//for (auto& n : a)
+	//	n = uid(dre);
+
+	////[문제] sort는 x를 몇 번 호출하는가?0
+	//sort(begin(a), end(a)[](int ,int){});
+	////lambda -> 코드의 인라인화 -> 속도 상승
+	////lambda 위치에 함수를 넣으면 실행 속도가 느려짐 
+
+	//cout << "처음 원소의 값: " << *begin(a) << endl;
+	//cout << "마지막 원소의 값: " << *(end(a)-1) << endl;	//end()는 마지막 원소 다음의 주소를 출력
+
+	////파일에 저장하라
+	//ofstream out("upsort.txt"s);
+	//for (int n : a)
+	//	out << n<<" ";
+
+	//[문제] 오름차순한 정렬 파일 "upsort.txt"가 있다
+	//읽어서 화면에 출력한다
+
+	//string_view sv = "upsort.txt"sv;
+	//ifstream in(sv);
+	//if (!in)
+	//{
+	//	cout << sv << "file can't open" << endl;
+	//	exit(0);
+	//}
+	//int arr[100];
+	//for (int& n : a)
+	//	in >> n;
+
+	//for (int d : a)
+	//	cout << d << ' ';
+	//cout << endl;
+
+	//[문제] 정수 100개를 400바이트 공간에 기록하자
+	//int a[100]개 값을 1~100으로 채우고 파일 "int_100.txt"에 기록하다
+	//파일 크기는 400byte가 되어야 한다
+
+	//int a[100];
+	//iota(begin(a), end(a), 1);
+	//for (int a : a)
+	//	cout << a << endl;
+
+	//ofstream out("int_100.txt",ios::binary);
+	//out.write((char*)a, 100 * sizeof(int));
+
+	//[문제] "int_100.txt"에 바이너리로 저장된 100개가 있다
+	//읽은 정수를 내림차순 정렬한 후 출력
+	ifstream in("int_100.txt"s,ios::binary);
+	if (!in)
+		exit(0);
+
+	int n[100];
+	in.read((char*)n, sizeof(int) * 100);
+
+	sort(begin(n), end(n), [](int a, int b) {return a > b; });
+	for (int e : n)
+		cout << e << " ";
+	//save("Source.cpp");
+	return 0;
+}
