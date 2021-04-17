@@ -3,6 +3,7 @@
 #include <iterator>
 #include <fstream>
 #include <vector>
+#include <list>
 using namespace std;
 
 //출력 이쁘게, 벡터에서 리스트로 변경해보기
@@ -97,7 +98,7 @@ public:
 
 	friend ostream& operator <<(ostream& os, const Player& pl)
 	{
-		os << "이름: " << pl.name << "점수: " << pl.score << "ID: " << pl.id << "자원수: " << pl.num;
+		os << "이름: " << pl.name << "\t점수: " << pl.score << "\tID: " << pl.id << "\t자원수: " << pl.num;
 		return os;
 	}
 
@@ -118,7 +119,7 @@ public:
 	}
 };
 
-vector<Player> v(1'000'000);
+list<Player> v(1'000'000);
 
 int main()
 {
@@ -127,7 +128,7 @@ int main()
 		tmp.read(in);
 
 	//마지막 객체 출력
-	cout << *(v.end() - 1) << endl;
+	cout << (v.back()) << endl;
 
 	//평균 출력
 	double sum = 0.0f;
@@ -155,7 +156,7 @@ int main()
 		cin >> num;
 		//ID순 출력
 		cout << "ID순 출력:" << endl;
-		sort(v.begin(), v.end(), [](Player& a, Player& b) {return a.getID() < b.getID(); });
+		v.sort([](Player& a, Player& b) {return a.getID() < b.getID(); });
 		for (auto itr = v.begin(); itr != v.end(); ++itr)
 		{
 			if ((*itr).getID() == num)
@@ -163,26 +164,26 @@ int main()
 				if (itr == v.begin())
 				{
 					cout << *itr << endl;
-					cout << *(itr + 1) << endl;
+					cout << *(++itr) << endl;
 				}
-				else if (itr == (v.end() - 1))
+				else if (itr == (--v.end()))
 				{
-					cout << *(itr - 1) << endl;
-					cout << *itr << endl;
+					cout << *(--itr) << endl;
+					cout << *(++itr) << endl;
 				}
 				else
 				{
-					cout << *(itr - 1) << endl;
-					cout << *itr << endl;
-					cout << *(itr + 1) << endl;
+					cout << *(--itr) << endl;
+					cout << *(++itr) << endl;
+					cout << *(++itr) << endl;
 				}
 			}
 		}
 		cout << endl << endl;
 
-		//이름순 출력
+	//	//이름순 출력
 		cout << "이름순 출력:" << endl;
-		sort(v.begin(), v.end(), [](Player& a, Player& b) {return a.getName() < b.getName(); });
+		v.sort([](Player& a, Player& b) {return a.getName() < b.getName(); });
 		for (auto itr = v.begin(); itr != v.end(); ++itr)
 		{
 			if ((*itr).getID() == num)
@@ -190,27 +191,26 @@ int main()
 				if (itr == v.begin())
 				{
 					cout << *itr << endl;
-					cout << *(itr + 1) << endl;
+					cout << *(++itr) << endl;
 				}
-				else if (itr == (v.end() - 1))
+				else if (itr == (--v.end()))
 				{
-					cout << *(itr - 1) << endl;
-					cout << *itr << endl;
+					cout << *(--itr) << endl;
+					cout << *(++itr) << endl;
 				}
 				else
 				{
-					cout << *(itr - 1) << endl;
-					cout << *itr << endl;
-					cout << *(itr + 1) << endl;
-
+					cout << *(--itr) << endl;
+					cout << *(++itr) << endl;
+					cout << *(++itr) << endl;
 				}
 			}
 		}
 		cout << endl << endl;
 
-		//점수순 출력
+	//	//점수순 출력
 		cout << "점수순 출력:" << endl;
-		sort(v.begin(), v.end(), [](Player& a, Player& b) {return a.getScore() < b.getScore(); });
+		v.sort([](Player& a, Player& b) {return a.getScore() < b.getScore(); });
 		for (auto itr = v.begin(); itr != v.end(); ++itr)
 		{
 			if ((*itr).getID() == num)
@@ -218,19 +218,18 @@ int main()
 				if (itr == v.begin())
 				{
 					cout << *itr << endl;
-					cout << *(itr + 1) << endl;
+					cout << *(++itr) << endl;
 				}
-				else if (itr == (v.end() - 1))
+				else if (itr == (--v.end()))
 				{
-					cout << *(itr - 1) << endl;
-					cout << *itr << endl;
+					cout << *(--itr) << endl;
+					cout << *(++itr) << endl;
 				}
 				else
 				{
-					cout << *(itr - 1) << endl;
-					cout << *itr << endl;
-					cout << *(itr + 1) << endl;
-
+					cout << *(--itr) << endl;
+					cout << *(++itr) << endl;
+					cout << *(++itr) << endl;
 				}
 			}
 		}
