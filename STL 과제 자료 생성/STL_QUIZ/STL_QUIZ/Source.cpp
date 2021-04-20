@@ -6,7 +6,7 @@
 #include <list>
 using namespace std;
 
-//출력 이쁘게, 벡터에서 리스트로 변경해보기
+//출력 이쁘게, 출력 함수로 바꾸기
 class Player
 {
 private:
@@ -120,10 +120,10 @@ public:
 };
 
 list<Player> v(1'000'000);
-
 int main()
 {
 	ifstream in("2021 STL 과제 파일", ios::binary);
+
 	for (auto& tmp : v)
 		tmp.read(in);
 

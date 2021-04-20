@@ -1,7 +1,8 @@
 ﻿  Source.cpp
+D:\STL\STL\STL_7_2\Source.cpp(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (949). Save the file in Unicode format to prevent data loss
   Generating code
-  226 of 401 functions (56.4%) were compiled, the rest were copied from previous compilation.
-    2 functions were new in current compilation
-    20 functions had inline decision re-evaluated but remain unchanged
+  0 of 296 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   STL_7_2.vcxproj -> D:\STL\STL\Release\STL_7_2.exe

@@ -1,7 +1,7 @@
 ﻿  Source.cpp
   Generating code
-  1 of 262 functions ( 0.4%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
+  16 of 262 functions ( 6.1%) were compiled, the rest were copied from previous compilation.
+    15 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   STL_QUIZ.vcxproj -> D:\STL\STL 과제 자료 생성\STL_QUIZ\Release\STL_QUIZ.exe

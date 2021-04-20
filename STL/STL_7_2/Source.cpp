@@ -1,8 +1,8 @@
 //-----------------------------------
-//¾ÕÀ¸·Î x86 release ¿¡¼­ compile ÇÑ´Ù
-//2021 1ÇĞ±â STL È­(5~6) ¸ñ(5~6) 4¿ù 15ÀÏ ¸ñ¿äÀÏ 7ÁÖ 2ÀÏÂ÷
+//ì•ìœ¼ë¡œ x86 release ì—ì„œ compile í•œë‹¤
+//2021 1í•™ê¸° STL í™”(5~6) ëª©(5~6) 4ì›” 15ì¼ ëª©ìš”ì¼ 7ì£¼ 2ì¼ì°¨
 //
-//½ÇÇàµÉ ¶§ ¸¶´Ù ¼Ò½ºÆÄÀÏÀ» ÀúÀåÇÑ´Ù.
+//ì‹¤í–‰ë  ë•Œ ë§ˆë‹¤ ì†ŒìŠ¤íŒŒì¼ì„ ì €ì¥í•œë‹¤.
 //-----------------------------------
 #include "save.h"
 #include <deque>
@@ -23,53 +23,58 @@ void print(const list<int>& cont)
 
 int main()
 {
-	//[¹®Á¦]"source.cpp"ÆÄÀÏÀ» ¸®½ºÆ®¸¦ »ç¿ëÇØ ÀĞÀº ÈÄ °Å²Ù·Î Ãâ·Â
-	//ÆÄÀÏ¿¡ ¼Ò¹®ÀÚ´Â ¸î±ÛÀÚÀÎÁö Ãâ·Â
-	//ifstream in("source.cpp");
-	//list<char> lt(istream_iterator<string>{in}, {});
-
-	//copy(lt.cbegin(), lt.cend(), ostream_iterator<char>{cout});
-	//cout << endl;
+	//[ë¬¸ì œ]"source.cpp"íŒŒì¼ì„ ë¦¬ìŠ¤íŠ¸ë¥¼ ì‚¬ìš©í•´ ì½ì€ í›„ ê±°ê¾¸ë¡œ ì¶œë ¥
+	//íŒŒì¼ì— ì†Œë¬¸ìëŠ” ëª‡ê¸€ìì¸ì§€ ì¶œë ¥
+	ifstream in("source.cpp");
+	list<string> lt(istream_iterator<string>{in}, {});
+	for (auto itr = lt.begin(); itr != lt.end(); ++itr)
+		reverse((*itr).begin(), (*itr).end());
+	copy(lt.cbegin(), lt.cend(), ostream_iterator<string>{cout,"\n"});
+	cout << endl;
 
 	//cout<<count_if(lt.cbegin(), lt.cend(), [](char c) {return islower(c); })<<endl;
-	//
+	
 
-	//[¹®Á¦]ÆÄÀÏ¿¡ using ÀÌ¶ó´Â ´Ü¾î°¡ ÀÖ´Ù¸é ¸î ¹øÂ° ÀÖ´ÂÁö Ãâ·Â
+	//[ë¬¸ì œ]íŒŒì¼ì— using ì´ë¼ëŠ” ë‹¨ì–´ê°€ ìˆë‹¤ë©´ ëª‡ ë²ˆì§¸ ìˆëŠ”ì§€ ì¶œë ¥	
 	
 	//list<string> lt(istream_iterator<string>{in}, {});
 
 	//auto p = find(lt.cbegin(), lt.cend(), "using"s);
 	//if (p != lt.end())
 	//{
-	//	cout << distance(lt.cbegin(), p)+1 << "¹øÂ°" << endl;
+	//	cout << distance(lt.cbegin(), p)+1 << "ï¿½ï¿½Â°" << endl;
 	//}
 	//else
 	//	cout << "failed" << endl;
 
 	/*----------------------------------------------------*/
 
-	//[µµÀü¹®Á¦] "source.cpp"¿¡ ÀÖ´Â ´Ü¾î¸¦ µÚÁı¾î Ãâ·ÂÇÏ¶ó
+	//[ë„ì „ë¬¸ì œ] "source.cpp"ì— ìˆëŠ” ë‹¨ì–´ë¥¼ ë’¤ì§‘ì–´ ì¶œë ¥í•˜ë¼
 
 	//list<int> con1{5,7,3,1,9 };
 	//list<int> con2{ 4,8,6,10,2 };
 
-	////[¹®Á¦] con1°ú con2¿¡ ÀÖ´Â ³»¿ëÀ» con3¿¡ mergeÇÏ¶ó
+	////[ë¬¸ì œ] con1ê³¼ con2ì— ìˆëŠ” ë‚´ìš©ì„ con3ì— mergeí•˜ë¼
 
 	//list<int>con3;
 	//con3.merge(con1);
 	//con3.merge(con2);
-	////merge() -> ¼ø¼­¸¦ ¸ÂÃâ °æ¿ì ±× ºÎºĞÀº º¸ÀåµÊ, ±×·¸Áö ¾ÊÀ¸¸é ´Ü¼ø º´ÇÕ, ¿ø·¡ µ¥ÀÌÅÍ´Â »èÁ¦
+	////merge() -> ìˆœì„œë¥¼ ë§ì¶œ ê²½ìš° ê·¸ ë¶€ë¶„ì€ ë³´ì¥ë¨, ê·¸ë ‡ì§€ ì•Šìœ¼ë©´ ë‹¨ìˆœ ë³‘í•©, ì›ë˜ ë°ì´í„°ëŠ” ì‚­ì œ
 
 	//print(con1);
 	//print(con2);
 	//print(con3);
 
 	/*-------------------------------*/
-	list<int> con{ 1,3,5,7,7,7,7,7,9,2,4,7,6,8,10 };
-	//con.sort([](int a, int b) {return a > b; });
-	print(con);
+	//list<int> con{ 1,3,5,7,7,7,7,7,9,2,4,7,6,8,10 };
+	////con.sort([](int a, int b) {return a > b; });
+	//print(con);
 
-	con.unique();	//-> ¿¬¼ÓÀ¸·Î Áßº¹µÈ ¿ø¼Ò Áß ÇÏ³ª¸¸ ³²±â°í ³ª¸ÓÁö »èÁ¦
-	print(con);
-	save("source.cpp");
+	//con.unique();	//-> ì—°ì†ìœ¼ë¡œ ì¤‘ë³µëœ ì›ì†Œ ì¤‘ í•˜ë‚˜ë§Œ ë‚¨ê¸°ê³  ë‚˜ë¨¸ì§€ ì‚­ì œ
+	//print(con);
+	//save("source.cpp");
+
+
+
+
 }
