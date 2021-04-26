@@ -117,15 +117,31 @@ public:
 		os.write((char*)this, sizeof(Player));
 		os.write((char*)p, num);
 	}
+
+	friend istream& operator >>(istream& is, Player& p)
+	{
+		if (p.p != nullptr)
+		{
+			p.num = 0;
+			delete[]p.p;
+		}
+		is.read((char*)(&p), sizeof(Player));
+		p.p = new char[p.num];
+		is.read((char*)(p.p), p.num);
+
+		return is;
+	}
 };
 
-list<Player> v(1'000'000);
+//list<Player> v(1'000'000);
 int main()
 {
 	ifstream in("2021 STL 과제 파일", ios::binary);
-
-	for (auto& tmp : v)
-		tmp.read(in);
+	list<Player> v(istream_iterator<Player>{in}, {});
+	//for (auto& tmp : v)
+	//	tmp.read(in);
+	//for (auto itr = v.begin(); itr != v.end(); ++itr)
+	//	in >> (*itr);
 
 	//마지막 객체 출력
 	cout << (v.back()) << endl;
