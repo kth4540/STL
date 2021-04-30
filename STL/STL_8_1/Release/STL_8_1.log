@@ -1,6 +1,6 @@
 ﻿  Source.cpp
-D:\STL\STL\STL_8_1\String.h(73,21): warning C4018: '<': signed/unsigned mismatch
-D:\STL\STL\STL_8_1\String.h(183,20): warning C4018: '<': signed/unsigned mismatch
+D:\STL\STL\STL_8_1\String.h(75,21): warning C4018: '<': signed/unsigned mismatch
+D:\STL\STL\STL_8_1\String.h(185,20): warning C4018: '<': signed/unsigned mismatch
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\xutility(425,93): error C2794: 'value_type': is not a member of any direct or indirect base class of 'std::indirectly_readable_traits<String_iterator>'
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\xutility(1157): message : see reference to alias template instantiation 'std::iter_value_t<String::iterator>' being compiled
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\algorithm(7359): message : see reference to alias template instantiation 'std::_Iter_value_t<String::iterator>' being compiled
